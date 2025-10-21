@@ -1,0 +1,31 @@
+﻿@page
+@model Ejercicio5Model
+
+<h1>Formulario de suscripción</h1>
+
+<form method="post">
+    <div>
+        Email:
+        <input type="email" name="email" required id="" value="@Model.email" />
+        @if (ModelState.ContainsKey("email") && ModelState["email"].Errors.Count > 0)
+        {
+            <span style="color:red;">@ModelState["email"].Errors[0].ErrorMessage</span>
+        }
+    </div>
+
+    <div>
+        Edad:
+        <input type="number" name="edad" id="" min="18" max="100" required value="@Model.edad" />
+        @if (ModelState.ContainsKey("edad") && ModelState["edad"].Errors.Count > 0)
+        {
+            <span style="color:red;">@ModelState["edad"].Errors[0].ErrorMessage</span>
+        }
+    </div>
+
+    <button type="submit">Suscribirse</button>
+
+    @if (Model.valido)
+    {
+        <h2>¡Gracias por suscribirte, @Model.nombre!</h2>
+    }
+</form>

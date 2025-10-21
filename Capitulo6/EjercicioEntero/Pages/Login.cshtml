@@ -1,0 +1,22 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Iniciar sesión</h1>
+
+<form method="post" asp-page-handler="Acceder">
+    <input type="text" name="nombre" placeholder="Nombre de usuario" required /><br>
+    <input type="password" name="contrasenna" placeholder="Contraseña" required /><br>
+    <button type="submit">Acceder</button>
+</form>
+
+<a asp-page="/Index"> Crear cuenta</a>
+
+@if (!string.IsNullOrEmpty(Model.Mensaje))
+{
+    <script>
+        alert("@Model.Mensaje");
+    </script>
+}

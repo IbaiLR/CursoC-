@@ -1,0 +1,13 @@
+﻿
+@page
+@model Ejercicio4Model
+
+<form action="" method="post">
+    Nombre <input type="text" name="nombre" id=""> <br>
+    Contraseña: <input type="password" name="pass" id=""> <br>
+    <button type="submit">Enviar</button>
+</form>
+
+@if(Model.isSubmitted){
+    <h2> ¡Gracias por registrarte, @Model.nombre!</h2>
+}

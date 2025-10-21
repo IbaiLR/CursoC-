@@ -1,0 +1,11 @@
+﻿
+@page
+@model Ejercicio3Model
+
+
+    <h1> Lista de Productos</h1>
+    <ul>
+        @foreach(var producto in Model.productos){
+            <li> @producto.nombre - @producto.precio</li>
+        }
+    </ul>

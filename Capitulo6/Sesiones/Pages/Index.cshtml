@@ -1,0 +1,94 @@
+﻿@page
+@model SesionesModel
+@using UsuarioModel.Models;
+<h1>Formulario con validación</h1>
+
+<h2> Usuarios Listados</h2>
+<ul id="listaUsuarios">
+    @foreach (Usuario usuario in Model.usuarios)
+    {
+        <li data-id="@usuario.id">
+            @usuario.nombre
+            <a href="#" class="ver-detalles"> Ver detalles </a>
+        </li>
+
+    }
+    <div id="detalles-usuario"></div>
+</ul>
+<form method="post" asp-page-handler="Insertar">
+    <input type="text" name="nombre" placeholder="Ingresa tu nombre"> <br>
+    <input type="email" name="email" placeholder="Ingersa tu email"> <br>
+    <input type="password" name="contrasenna" placeholder="Ingresa tu contraseña"> <br>
+    <button type="submit">Insertar</button>
+</form>
+
+<p>¿Ya tienes una cuenta?
+    <a asp-page="/Login">Inicia sesión aquí</a>
+</p>
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        //Eliminar un usuario
+        document.querySelectorAll("li[data-id]").forEach(li => {
+            li.addEventListener("dblclick", async () => {
+                const id = li.dataset.id; //obtiene el id del atrbuto data-id
+                await eliminarUsuario(id)
+            });
+        })
+
+        //Ver detalles de un usuario con event listener en cez de onclick
+        document.querySelectorAll(".ver-detalles").forEach(a => {
+            a.addEventListener('click', async (e) => {
+                e.preventDefault()//evita que se recargue la página por el enlace
+                const li = e.target.closest("li"); //busca el <li> más cercano
+                const id = li.dataset.id //obtiene el data-id de li
+                await mostrarDetalles(id);
+            })
+        });
+    });
+
+    //Ver detalles de un usuario con event listener en cez de onclick
+    document.querySelectorAll(".ver-detalles").forEach(a => {
+        a.addEventListener('click', async (e) => {
+            e.preventDefault()//evita que se recargue la página por el enlace
+            const li = e.target.closest("li"); //busca el <li> más cercano
+            const id = li.dataset.id //obtiene el data-id de li
+            await mostrarDetalles(id);
+        })
+    })
+    document.getElementById('detalles').addEventListener('click', () => mostrarDetalles())
+
+    async function eliminarUsuario(id) {
+        const res = await fetch(`?handler=Eliminar&id=${id}`);
+
+        const data = await res.json(); //convertimos la respuesta en json
+
+        if (res.ok && data.mensaje === "ok") {
+            const li = document.querySelector(`li[data-id="${id}"]`); /*le estás diciendo ahi que la etiqueta li (<li>) 
+            que tenga dentro de ella el data id con un id concreto se guarde en la variable li */
+            if (li) li.remove();
+            alert("Usuario eliminado correctamente");
+        } else {
+            alert("Error al eliminar el usuario");
+        }
+    }
+
+    async function mostrarDetalles(id) {
+        const res = await fetch(`?handler=GetById&id=${id}`);
+
+        const data = await res.json();
+        if (res.ok && data.id) {
+            const div = document.getElementById('detalles-usuario');
+            div.innerHTML = `
+            <h3> Detalles del Usuario </h3>
+            <p> Nombre: ${data.nombre} </p>
+            <p> Email: ${data.email} </p>
+            <p> Contraseña cifrada: ${data.contrasenna}
+            `;
+        } else {
+            alert("No se pudo obtener la información del usuario");
+        }
+    }
+
+
+</script>

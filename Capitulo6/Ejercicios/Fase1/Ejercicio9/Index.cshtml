@@ -1,0 +1,26 @@
+﻿@page
+@model Ejercicio9Model
+
+<h1> Lista de la compra</h1>
+@foreach(Producto producto in Model.productos){
+    <li> 
+        @producto.nombre
+
+        <!-- ELIMINAR-->
+        <form  method="post" asp-page-handler="Borrar" style="display:inline;">
+            <input type="hidden" name="id" value="@producto.id">
+            <button type="submit">Eliminar</button>
+        
+        </form>
+    </li>
+}
+
+<h3> Añadir elemento</h3>
+<form  method="post" asp-page-handler="Insertar">
+    <input type="text" name="nombre" >
+    <button type="submit">Añadir</button>
+</form>
+
+<form method="post" asp-page-handler="Vaciar">
+    <button type="submit">Vaciar Lista</button>
+</form>

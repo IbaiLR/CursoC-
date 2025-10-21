@@ -1,0 +1,14 @@
+﻿@page
+@model Ejercicio1Model
+
+<h1>Lista de la compra</h1>
+@foreach(Producto producto in Model.productos){
+    <li>
+    @producto.nombre
+    <a asp-page-handler="Borrar" asp-route-id="@producto.id">(Borrar)</a>
+    </li>
+}
+<form asp-page-handler="Insertar" method="post">
+   Nombre del producto: <input type="text" name="nombre"> 
+   <button type="submit">Insertar</button>
+</form>

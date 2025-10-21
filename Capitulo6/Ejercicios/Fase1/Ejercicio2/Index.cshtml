@@ -1,0 +1,14 @@
+﻿@page
+@model Ejercicio2Model
+
+<form action="" method="post">
+    <h1> Formulario de contacto</h1>
+
+    Nombre: <input type="text" name="Nombre" id=""> <br>
+    Email <input type="email" name="Email" id=""> <br>
+    <button type="submit">Enviar</button>
+
+@if(Model.IsSubmitted){
+    <h2> ¡Gracias por enviar tu mensaje, @Model.Nombre</h2>
+}
+</form>

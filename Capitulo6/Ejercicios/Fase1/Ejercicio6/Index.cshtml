@@ -1,0 +1,20 @@
+﻿@page
+@model Ejercicio6Model
+
+<h1> Formulario de inicio</h1>
+
+<form action="" method="post">
+
+    Nombre: <input type="text" name="Nombre" required value="@Model.Nombre"> <br>
+    Email: <input type="email" name="Email" required value="@Model.Email"> <br>
+    <button type="submit">Agregar usuario</button>
+
+
+</form>
+
+<h2>Lista de usuarios registrados</h2>
+<ul>
+    @foreach(var usuario in Model.usuarios){
+        <li> @usuario.Nombre - @usuario.Email</li>
+    }
+</ul>

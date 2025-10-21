@@ -1,0 +1,23 @@
+﻿@page
+@model Ejercicio7Model
+
+<h1> Lista de alumnos</h1>
+
+<ul>
+    @foreach (var alumno in Model.Alumnos){
+        <li> @alumno</li>
+    }
+</ul>
+
+<form method="post">
+    
+        Nombre: <input type="text" name="nombre" required> <br>
+        Apellidos: <input type="text" name="apellidos" required> <br>
+        Email: <input type="email" name="email" required> <br>
+        Edad: <input type="number" name="edad" required> <br>
+
+        <button type="submit">Registrar</button>
+
+
+    
+</form>

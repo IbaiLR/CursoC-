@@ -1,0 +1,21 @@
+﻿@page
+@model Ejercicio2Model
+@using UsuarioModel.Models;
+<h1>Formulario con validación</h1>
+
+@* <h2> Usuarios Listados</h2>
+@foreach(Usuario usuario in Model.usuarios){
+    <li> 
+        @usuario.nombre <a asp-page-handler="Eliminar" asp-route-id="@usuario.id">Eliminar</a>
+    </li>
+} *@
+<form method="post" asp-page-handler="Insertar">
+    <input type="text" name="nombre" placeholder="Ingresa tu nombre"> <br>
+    <input type="email" name="email" placeholder="Ingersa tu email"> <br>
+    <input type="password" name="contrasenna" placeholder="Ingresa tu contraseña"> <br>
+    <button type="submit">Insertar</button>
+</form>
+
+<p>¿Ya tienes una cuenta? 
+    <a asp-page="/Login">Inicia sesión aquí</a>
+</p>
