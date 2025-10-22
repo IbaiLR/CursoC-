@@ -573,3 +573,5 @@ C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\refint\Ejercic
 C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\Ejercicio1.pdb
 C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\Ejercicio1.genruntimeconfig.cache
 C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\ref\Ejercicio1.dll
+C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\Ejercicio1.sourcelink.json
+C:\Users\ibai\Desktop\CursoC#\Capitulo6\Sesiones\obj\Debug\net9.0\compressed\xvwf4dvphk-5ipweew5fc.gz

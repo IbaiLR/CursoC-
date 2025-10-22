@@ -1,0 +1,15 @@
+@page "{id:int}"
+@model ModificarModel
+@using Org.BouncyCastle.Tls
+@using UsuarioModel.Models;
+
+<h2> Modificar usuario</h2>
+<form method="post" asp-page-handler="Modificar">
+    <input type="text" name="nombre" value="@Model.NombreUsuario"> <br>
+    <input type="email" name="email" value="@Model.EmailUsuario"> <br>
+    <button type="submit">Aplicar</button>
+</form>
+    
+    @if(!string.IsNullOrEmpty(@Model.Mensaje)){
+        <script> alert("@Model.Mensaje")</script>
+    }
