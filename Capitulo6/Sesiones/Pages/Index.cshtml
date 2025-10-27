@@ -12,9 +12,20 @@
 
         <li data-id="@usuario.id">
 
-            @usuario.nombre
+            <span class="@(usuario.rol == "admin" ? "nombre-usuario admin" : "nombre-usuario")">
+                @usuario.nombre
+            </span>
             <a href="#" class="ver-detalles"> Ver detalles </a>
-             <a asp-page="/Modificar" asp-route-id="@usuario.id">Modificar usuario</a> @*Coge /Modificar?id=x *@
+            <a asp-page="/Modificar" asp-route-id="@usuario.id">Modificar usuario</a> @*Coge /Modificar?id=x *@
+            @if (usuario.rol == "admin")
+            {
+                <style>
+                    .nombre-usuario.admin{
+                        color: green;
+                        }
+                </style>
+            }
+
 
         </li>
 
@@ -24,36 +35,42 @@
     <input type="button" value="Ocultar detalles" id="btn-ocultar">
 </ul>
 <form method="post" asp-page-handler="Insertar">
-    <input type="text" name="nombre" placeholder="Ingresa tu nombre"> <br>
-    <input type="email" name="email" placeholder="Ingresa tu email"> <br>
-    <input type="password" name="contrasenna" placeholder="Ingresa tu contraseña"> <br>
+    <input type="text" name="nombre" placeholder="Ingresa tu nombre" required> <br>
+    <input type="email" name="email" placeholder="Ingresa tu email" required> <br>
+    <input type="password" name="contrasenna" placeholder="Ingresa tu contraseña" required> <br>
+    <select name="rol" required>
+        <option value="Ingresa el rol del usuario" disabled selected>Ingresa el rol del usuario</option>
+        <option value="admin">Administrador</option>
+        <option value="usuario"> Usuario normal</option>
+    </select>
     <button type="submit">Insertar</button>
 </form>
 
 <p>¿Ya tienes una cuenta?
     <a asp-page="/Login">Inicia sesión aquí</a>
 </p>
-<script>
-    
-    
-        //Eliminar un usuario
-        document.querySelectorAll("li[data-id]").forEach(li => {
-            li.addEventListener("dblclick", async () => {
-                const id = li.dataset.id; //obtiene el id del atrbuto data-id
-                await eliminarUsuario(id)
-            });
-        })
 
-        //Ver detalles de un usuario con event listener en cez de onclick
-        document.querySelectorAll(".ver-detalles").forEach(a => {
-            a.addEventListener('click', async (e) => {
-                e.preventDefault()//evita que se recargue la página por el enlace
-                const li = e.target.closest("li"); //busca el <li> más cercano
-                const id = li.dataset.id //obtiene el data-id de li
-                await mostrarDetalles(id);
-            })
+<script>
+
+
+    //Eliminar un usuario
+    document.querySelectorAll("li[data-id]").forEach(li => {
+        li.addEventListener("dblclick", async () => {
+            const id = li.dataset.id; //obtiene el id del atrbuto data-id
+            await eliminarUsuario(id)
         });
-        document.getElementById('btn-ocultar').addEventListener('click', ocultarDetalles);
+    })
+
+    //Ver detalles de un usuario con event listener en cez de onclick
+    document.querySelectorAll(".ver-detalles").forEach(a => {
+        a.addEventListener('click', async (e) => {
+            e.preventDefault()//evita que se recargue la página por el enlace
+            const li = e.target.closest("li"); //busca el <li> más cercano
+            const id = li.dataset.id //obtiene el data-id de li
+            await mostrarDetalles(id);
+        })
+    });
+    document.getElementById('btn-ocultar').addEventListener('click', ocultarDetalles);
 
 
     //Ver detalles de un usuario con event listener en cez de onclick
@@ -63,9 +80,9 @@
             const li = e.target.closest("li"); //busca el <li> más cercano
             const id = li.dataset.id //obtiene el data-id de li
             const div = document.getElementById('detalles-usuario');
-           
-                await mostrarDetalles(id);
-            
+
+            await mostrarDetalles(id);
+
         })
     })
 
@@ -88,25 +105,26 @@
 
     async function mostrarDetalles(id) {
         const res = await fetch(`?handler=ById&id=${id}`);
-         const div = document.getElementById('detalles-usuario');
+        const div = document.getElementById('detalles-usuario');
         const data = await res.json();
         if (res.ok && data.id) {
-           
+
             div.innerHTML = `
             <h3> Detalles del Usuario </h3>
             <p> Nombre: ${data.nombre} </p>
             <p> Email: ${data.email} </p>
             <p> Contraseña cifrada: ${data.contrasenna}
+            <p> Rol: ${data.rol}
             `;
         } else {
             alert("No se pudo obtener la información del usuario");
         }
-        div.style.display='block';
+        div.style.display = 'block';
     }
 
     function ocultarDetalles() {
-        let div = document.getElementById('detalles-usuario'); 
-        div.style.display='none';
+        let div = document.getElementById('detalles-usuario');
+        div.style.display = 'none';
     }
 
 

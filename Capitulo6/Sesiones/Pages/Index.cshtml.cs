@@ -27,12 +27,12 @@ public class SesionesModel : PageModel
       
 
     }
-    public IActionResult OnPostInsertar(string nombre, string email, string contrasenna)
+    public IActionResult OnPostInsertar(string nombre, string email, string contrasenna, string rol)
     {
         string contrasennaCif = cifrarContrasenna(contrasenna);
         if (!string.IsNullOrEmpty(contrasennaCif))
         {
-            insertarUsuario(nombre, email, contrasennaCif);
+            insertarUsuario(nombre, email, contrasennaCif, rol);
 
         }
         return RedirectToPage();
@@ -85,7 +85,8 @@ public JsonResult OnGetById(int id)
                         id = lector.GetInt32("id"),
                         nombre = lector.GetString("nombre"),
                         email = lector.GetString("email"),
-                        contrasenna = lector.GetString("contrasenna")
+                        contrasenna = lector.GetString("contrasenna"),
+                        rol=lector.GetString("rol")
                     };
                     return new JsonResult(usuario);
                 }
@@ -136,17 +137,18 @@ public JsonResult OnGetById(int id)
         }
     }
 
-    public void insertarUsuario(string nombre, string email, string contrasenna)
+    public void insertarUsuario(string nombre, string email, string contrasenna, string rol)
     {
         try
         {
             _conn.Open();
-            using (var cmd = new MySqlCommand(@"INSERT INTO usuarios(nombre,email, contrasenna)
-                                        VALUES(@nombre, @email,@contrasenna)", _conn))
+            using (var cmd = new MySqlCommand(@"INSERT INTO usuarios(nombre,email, contrasenna, rol)
+                                        VALUES(@nombre, @email,@contrasenna,@rol)", _conn))
             {
                 cmd.Parameters.AddWithValue("@nombre", nombre);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@contrasenna", contrasenna);
+                cmd.Parameters.AddWithValue("@rol", rol);
 
                 cmd.ExecuteNonQuery();
 
@@ -167,7 +169,7 @@ public JsonResult OnGetById(int id)
         try
         {
             _conn.Open();
-            using (var cmd = new MySqlCommand("SELECT id, nombre, email, contrasenna FROM usuarios", _conn))
+            using (var cmd = new MySqlCommand("SELECT * FROM usuarios", _conn))
             {
                 cmd.ExecuteNonQuery();
                 using (var lector = cmd.ExecuteReader())
@@ -176,6 +178,7 @@ public JsonResult OnGetById(int id)
                     int nombreIdx = lector.GetOrdinal("nombre");
                     int emailIdx = lector.GetOrdinal("email");
                     int contrasennaIdx = lector.GetOrdinal("contrasenna");
+                    int rolIdx = lector.GetOrdinal("rol");
                     while (lector.Read())
                     {
                         var u = new Usuario
@@ -184,6 +187,7 @@ public JsonResult OnGetById(int id)
                             nombre = lector.IsDBNull(nombreIdx) ? "" : lector.GetString(nombreIdx),
                             email = lector.IsDBNull(emailIdx) ? "" : lector.GetString(emailIdx),
                             contrasenna = lector.IsDBNull(contrasennaIdx) ? "" : lector.GetString(contrasennaIdx),
+                            rol= lector.IsDBNull(rolIdx) ? "": lector.GetString(rolIdx)
                         };
                         usuarios.Add(u);
                     }

@@ -9,6 +9,7 @@
     <input type="email" name="email" value="@Model.EmailUsuario"> <br>
     <button type="submit">Aplicar</button>
 </form>
+<a asp-page="/Index"> Volver</a>
     
     @if(!string.IsNullOrEmpty(@Model.Mensaje)){
         <script> alert("@Model.Mensaje")</script>
