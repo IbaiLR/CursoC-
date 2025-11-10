@@ -1,0 +1,203 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\controllers\\itemscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\items\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\items\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\models\\saludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\saludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\usuario\\overview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Overview.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Items\\Overview.cshtml",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Items\\Overview.cshtml",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Items\\Overview.cshtml",
+              "RelativeToolTip": "MyAppMVC1\\Views\\Items\\Overview.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-10T14:23:20.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ItemsController.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\ItemsController.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Controllers\\ItemsController.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\ItemsController.cs*",
+              "RelativeToolTip": "MyAppMVC1\\Controllers\\ItemsController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:14:45.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Item.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Models\\Item.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Item.cs",
+              "RelativeToolTip": "MyAppMVC1\\Models\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:12:12.146Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Saludo.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Saludo.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Models\\Saludo.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Saludo.cs",
+              "RelativeToolTip": "MyAppMVC1\\Models\\Saludo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T14:00:17.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\appsettings.json",
+              "RelativeDocumentMoniker": "MyAppMVC1\\appsettings.json",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\appsettings.json",
+              "RelativeToolTip": "MyAppMVC1\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-10T13:23:20.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Program.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Program.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Program.cs",
+              "RelativeToolTip": "MyAppMVC1\\Program.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAASwBwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:34:52.257Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Overview.cshtml",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Overview.cshtml",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\Overview.cshtml",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Overview.cshtml",
+              "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\Overview.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-30T15:24:19.526Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "MyAppMVC1\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:21:25.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Models\\ErrorViewModel.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "MyAppMVC1\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:21:23.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Controllers\\UsuarioController.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "MyAppMVC1\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:18:50.074Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "MyAppMVC1\\Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Usuario.cs",
+              "RelativeToolTip": "MyAppMVC1\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-30T15:06:24.901Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
