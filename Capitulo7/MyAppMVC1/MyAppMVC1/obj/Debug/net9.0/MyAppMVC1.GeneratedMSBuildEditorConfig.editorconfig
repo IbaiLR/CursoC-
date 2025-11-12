@@ -28,16 +28,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Items/Overview.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSXRlbXNcT3ZlcnZpZXcuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Crear.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Exito.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFeGl0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/IniciarSesion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmljaWFyU2VzaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Overview.cshtml]

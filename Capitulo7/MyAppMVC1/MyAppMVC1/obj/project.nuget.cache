@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "11swqU4I/mA=",
+  "dgSpecHash": "UraO34gMwgQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\MyAppMVC1.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\ibai\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.2\\microsoft.extensions.dependencyinjection.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\ibai\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.2\\microsoft.extensions.logging.abstractions.8.0.2.nupkg.sha512",
+    "C:\\Users\\ibai\\.nuget\\packages\\mysqlconnector\\2.4.0\\mysqlconnector.2.4.0.nupkg.sha512"
+  ],
   "logs": []
 }

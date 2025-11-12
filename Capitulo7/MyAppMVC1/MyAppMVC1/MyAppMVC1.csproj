@@ -17,4 +17,8 @@
     <Compile Remove="Models\Class.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MySqlConnector" Version="2.4.0" />
+  </ItemGroup>
+
 </Project>

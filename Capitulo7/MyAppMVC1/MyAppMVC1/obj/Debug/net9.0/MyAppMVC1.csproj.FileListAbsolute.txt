@@ -96,3 +96,6 @@ C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\ref
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.pdb
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.genruntimeconfig.cache
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\ref\MyAppMVC1.dll
+C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.csproj.AssemblyReference.cache
+C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\bin\Debug\net9.0\MySqlConnector.dll
+C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.csproj.Up2Date

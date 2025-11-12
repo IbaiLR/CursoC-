@@ -1,0 +1,38 @@
+﻿@model List<MyAppMVC1.Models.Usuario>
+
+<h2>Usuarios registrados</h2>
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger">@ViewBag.Error</div>
+}
+else if (!Model.Any())
+{
+    <div class="alert alert-warning">No hay usuarios registrados aún.</div>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var u in Model)
+            {
+                <tr>
+                    <td>@u.id</td>
+                    <td>@u.nombre</td>
+                    <td>@u.apellidos</td>
+                    <td>@u.email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a asp-controller="Home" asp-action="Index"> Volver</a>
+}

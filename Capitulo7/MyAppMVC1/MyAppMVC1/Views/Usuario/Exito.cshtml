@@ -1,0 +1,14 @@
+﻿@model MyAppMVC1.Models.Usuario
+@{
+    ViewData["Title"] = "Registro exitoso";
+}
+
+<div class="alert alert-success mt-4">
+    <h3> Usuario registrado con éxito</h3>
+    <p><strong>Nombre:</strong> @Model.nombre</p>
+    <p><strong>Apellidos:</strong> @Model.apellidos</p>
+    <p><strong>Email:</strong> @Model.email</p>
+</div>
+
+<a asp-action="Crear" class="btn btn-primary mt-3">Registrar otro usuario</a>
+<a asp-controller="Home" asp-action="Index" class="btn btn-secondary mt-3">Volver al inicio</a>
