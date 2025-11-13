@@ -19,6 +19,7 @@ else
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Email</th>
+                <th> Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -29,7 +30,14 @@ else
                     <td>@u.nombre</td>
                     <td>@u.apellidos</td>
                     <td>@u.email</td>
+                    <td>
+                        <a asp-controller="Usuario" asp-action="verDetalles" asp-route-id="@u.id"> Ver detalles</a>
+                        <a asp-controller="Usuario" asp-action="eliminarUsuario" asp-route-id="@u.id"> Eliminar Usuario</a>
+                    </td>
                 </tr>
+                 
+                  
+                
             }
         </tbody>
     </table>

@@ -1,6 +1,7 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Accessor
 
 
 <div class="text-center">
@@ -8,5 +9,14 @@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-<a asp-controller="Usuario" asp-action="Crear"> Registrarse</a>
+@if (Accessor.HttpContext.Session.GetString("usuarioNombre") == null)
+{
+    <a asp-controller="Usuario" asp-action="Crear"> Registrarse</a>
+<a asp-controller="Usuario" asp-action="IniciarSesion" class="border-light-subtle">  Iniciar Sesión</a>
+}
 <a asp-controller="Usuario" asp-action="Index"> Ver usuarios</a>
+
+@if (Accessor.HttpContext.Session.GetString("usuarioNombre") != null)
+{
+    <a asp-controller="Usuario" asp-action="cerrarSesion"> Cerrar sesión</a>
+}

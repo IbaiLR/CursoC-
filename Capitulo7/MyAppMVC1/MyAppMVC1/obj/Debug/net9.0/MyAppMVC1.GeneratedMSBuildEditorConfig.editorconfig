@@ -40,8 +40,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/DetallesUsuario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xEZXRhbGxlc1VzdWFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Exito.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFeGl0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/ExitoLogin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xFeGl0b0xvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ibai/Desktop/CursoC\#/Capitulo7/MyAppMVC1/MyAppMVC1/Views/Usuario/Index.cshtml]

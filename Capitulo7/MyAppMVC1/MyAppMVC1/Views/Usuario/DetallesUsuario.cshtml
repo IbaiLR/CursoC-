@@ -1,0 +1,21 @@
+﻿@model MyAppMVC1.Models.Usuario
+@{
+    ViewData["Title"] = "Detalles de Usuario";
+}
+
+<h1> Detalles de @Model.nombre</h1>
+<ul class="accordion-flush">
+    <li>
+        <b> Nombre: </b>@Model.nombre <br />
+       
+        
+
+    </li>
+    <li>
+        <b> Apellidos: </b> @Model.apellidos <br />
+    </li>
+    <li>
+        <b> Email: </b> @Model.email <br />
+    </li>
+</ul>
+<a asp-controller="Usuario" asp-action="index"> Volver</a>
