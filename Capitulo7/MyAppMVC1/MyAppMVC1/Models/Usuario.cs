@@ -147,4 +147,23 @@ public class Usuario
         
     }
 
+    public static void eliminarUsuario(int id, IConfiguration configuration)
+    {
+        try
+        {
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            using var conexion = new MySqlConnection(connectionString);
+            conexion.Open();
+
+            string sql = "DELETE FROM usuarios WHERE id= @id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.ExecuteNonQuery();
+        } catch(Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+}
+
 }

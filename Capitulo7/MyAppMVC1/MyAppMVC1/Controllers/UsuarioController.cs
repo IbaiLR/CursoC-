@@ -109,6 +109,17 @@ namespace MyAppMVC1.Controllers;
         return RedirectToAction("Index");
     }
 
+    public IActionResult eliminarUsuario(int id)
+    {
+        Usuario u = Usuario.getById(id, _configuration);
+        if (u != null)
+            Usuario.eliminarUsuario(id, _configuration);
+
+        return RedirectToAction("Index");
+
+
+    }
+
         public IActionResult cerrarSesion()
         {
             HttpContext.Session.Clear();
