@@ -83,7 +83,7 @@ namespace MyAppMVC1.Controllers;
             }
 
             // recuperar usuario completo de la BD
-            var user = usuario.GetByEmail(userEncontrado.email, _configuration);
+            var user = Usuario.GetByEmail(userEncontrado.email, _configuration);
 
             if (user == null)
             {
@@ -97,8 +97,35 @@ namespace MyAppMVC1.Controllers;
 
             // redirigir a una vista de éxito
             return View("ExitoLogin", user);
+    }
+
+    [HttpGet]
+    public IActionResult mostrarEditarPerfil(string email)
+    {
+        Usuario u = Usuario.GetByEmail(email, _configuration);
+        if (u == null)
+            return View();
+        return View("EditarPerfil", u);
+    }
+
+    [HttpPost]
+    public IActionResult editarPerfil(Usuario u)
+    {
+        Console.WriteLine("ID del usuario: "+ u.id);
+        if(!ModelState.IsValid)
+            return View("EditarPerfil", u);
+
+        bool ok = u.Update(_configuration, out string? error);
+        if (!ok)
+        {
+            return View("EditarPerfil", u);
         }
 
+        HttpContext.Session.SetString("usuarioNombre", u.nombre);
+        HttpContext.Session.SetString("usuarioEmail", u.email);
+
+        return RedirectToAction("mostrarEditarPerfil", new {email = u.email});
+    }
 
 
     public IActionResult verDetalles(int id)

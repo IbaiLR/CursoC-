@@ -61,6 +61,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
+wwwroot\js\editar.js
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\css\site.css
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\favicon.ico
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\js\site.js
@@ -123,3 +124,4 @@ C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\lib\jquery\d
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\wwwroot\js\editar.js

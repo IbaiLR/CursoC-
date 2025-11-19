@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using MySqlConnector;
 using System.Collections;
 using System.ComponentModel.DataAnnotations;
+using System.Security.AccessControl;
 
 namespace MyAppMVC1.Models;
 
@@ -107,7 +108,7 @@ public class Usuario
         Usuario usuario = null;
         if (lector.Read())
         {
-             usuario = new Usuario
+            usuario = new Usuario
             {
                 id = lector.GetInt32("id"),
                 nombre = lector.GetString("nombre"),
@@ -120,7 +121,7 @@ public class Usuario
         }
         return usuario;
     }
-    public Usuario GetByEmail(string email, IConfiguration configuration)
+    public static Usuario GetByEmail(string email, IConfiguration configuration)
     {
         var connectionString = configuration.GetConnectionString("DefaultConnection");
 
@@ -132,19 +133,19 @@ public class Usuario
 
         var lector = cmd.ExecuteReader();
         if (!lector.Read()) return null;
-        
-            return new Usuario
-            {
-                id = lector.GetInt32("id"),
-                nombre = lector.GetString("nombre"),
-                apellidos = lector.GetString("apellidos"),
-                email = lector.GetString("email"),
-                contrasenna = lector.GetString("contrasenna")
+
+        return new Usuario
+        {
+            id = lector.GetInt32("id"),
+            nombre = lector.GetString("nombre"),
+            apellidos = lector.GetString("apellidos"),
+            email = lector.GetString("email"),
+            contrasenna = lector.GetString("contrasenna")
 
 
-            };
-       
-        
+        };
+
+
     }
 
     public static void eliminarUsuario(int id, IConfiguration configuration)
@@ -160,10 +161,39 @@ public class Usuario
             using var cmd = new MySqlCommand(sql, conexion);
             cmd.Parameters.AddWithValue("id", id);
             cmd.ExecuteNonQuery();
-        } catch(Exception ex)
+        }
+        catch (Exception ex)
         {
             Console.WriteLine(ex);
         }
-}
+    }
 
+    public bool Update(IConfiguration configuration, out string? error)
+    {
+        error = null;
+
+        try
+        {
+            using var conexion = new MySqlConnection(configuration.GetConnectionString("DefaultConnection"));
+
+            conexion.Open();
+            var sql = @"UPDATE usuarios 
+                    SET nombre=@nombre, apellidos=@apellidos, email=@email
+                    WHERE id=@id";
+
+            using var cmd = new MySqlCommand(sql, conexion);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+            cmd.Parameters.AddWithValue("@apellidos", apellidos);
+            cmd.Parameters.AddWithValue("@email", email);
+
+            return cmd.ExecuteNonQuery() == 1;
+        }
+        catch (Exception ex)
+        {
+            error = ex.Message;
+            return false;
+        }
+
+    }
 }

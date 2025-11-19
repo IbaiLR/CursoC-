@@ -14,9 +14,11 @@
     <a asp-controller="Usuario" asp-action="Crear" class="btn btn-primary"> Registrarse</a>
 <a asp-controller="Usuario" asp-action="IniciarSesion" class="btn btn-primary">  Iniciar Sesión</a>
 }
-<a asp-controller="Usuario" asp-action="Index" class=" btn btn-primary"> Ver usuarios</a> <!-- No haría falta poner el asp-action porque es index y si no hay nada es lo que coge po defecto->
+<a asp-controller="Usuario" asp-action="Index" class=" btn btn-primary"> Ver usuarios</a> <!-- No haría falta poner el asp-action porque es index y si no hay nada es lo que coge po defecto-->
 
 @if (Accessor.HttpContext.Session.GetString("usuarioNombre") != null)
 {
-    <a asp-controller="Usuario" asp-action="cerrarSesion"> Cerrar sesión</a>
+    var emailSesion = Accessor.HttpContext.Session.GetString("usuarioEmail");
+    <a asp-controller="Usuario" asp-action="cerrarSesion" class="btn btn-primary"> Cerrar sesión</a>
+    <a asp-controller="Usuario" asp-action="mostrarEditarPerfil" asp-route-email="@emailSesion" class="btn btn-primary"> Editar Perfil</a>
 }

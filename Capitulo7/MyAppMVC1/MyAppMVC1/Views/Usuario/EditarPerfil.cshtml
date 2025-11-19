@@ -1,0 +1,16 @@
+﻿@model MyAppMVC1.Models.Usuario;
+
+@{
+    ViewData["Title"] = "Editar Perfil";
+}
+<form asp-controller="Usuario" asp-action="editarPerfil" method="post"> 
+    <input type="hidden" asp-for="id" />
+    <input asp-for="nombre" class="form-control" disabled /> <br />
+    <input asp-for="apellidos" class="form-control" disabled/> <br />
+    <input asp-for="email" class="form-control" disabled/> <br />
+    
+    <button type="submit" style="display:none" class="btn btn-secondary" id="btn-submit"> Aplicar Cambios</button>
+</form>
+<button id="btn-editarPerfil" class="btn btn-primary"> Editar</button>
+<a asp-controller="Home" asp-action="Index" class="btn btn-primary"> Volver</a>
+<script src="~/js/editar.js"></script>
