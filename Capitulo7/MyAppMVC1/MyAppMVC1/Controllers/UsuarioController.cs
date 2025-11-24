@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using MyAppMVC1.Models;
+using MyAppMVC1.Models.ViewModels;
 
 namespace MyAppMVC1.Controllers;
 
@@ -103,28 +104,52 @@ namespace MyAppMVC1.Controllers;
     public IActionResult mostrarEditarPerfil(string email)
     {
         Usuario u = Usuario.GetByEmail(email, _configuration);
+
+        var vm = new EditarPerfilViewModel
+        {
+            id = u.id,
+            nombre= u.nombre,
+            apellidos= u.apellidos,
+            email = u.email,
+        };
         if (u == null)
             return View();
-        return View("EditarPerfil", u);
+        return View("EditarPerfil", vm);
     }
 
     [HttpPost]
     public IActionResult editarPerfil(Usuario u)
     {
-        Console.WriteLine("ID del usuario: "+ u.id);
-        if(!ModelState.IsValid)
+        ModelState.Remove("contrasenna");
+
+        if (!ModelState.IsValid) {
+            foreach (var e in ModelState)
+            {
+                foreach (var err in e.Value.Errors)
+                    Console.WriteLine($" - {e.Key}: {err.ErrorMessage}");
+            }
+        
             return View("EditarPerfil", u);
+        }
 
         bool ok = u.Update(_configuration, out string? error);
         if (!ok)
         {
+            Console.WriteLine("Error al actualizar al usuario");
             return View("EditarPerfil", u);
         }
+        Console.WriteLine("NUEVOS DATOS");
+        Console.WriteLine("ID del usuario: " + u.id);
+        Console.WriteLine("Nombre del usuario: " + u.nombre);
+        Console.WriteLine("Apellidos del usuario: " + u.apellidos);
 
         HttpContext.Session.SetString("usuarioNombre", u.nombre);
         HttpContext.Session.SetString("usuarioEmail", u.email);
 
+       
         return RedirectToAction("mostrarEditarPerfil", new {email = u.email});
+
+       
     }
 
 

@@ -1,6 +1,5 @@
 ﻿
-function editarPerfil() {
-    let btnEditar = document.getElementById('btn-editarPerfil');
+let btnEditar = document.getElementById('btn-editarPerfil');
     btnEditar.addEventListener('click', () => {
 
         document.querySelectorAll('input.form-control').forEach(input => {
@@ -12,4 +11,4 @@ function editarPerfil() {
 
         btnEditar.style.display = 'none';
     })
-}
+

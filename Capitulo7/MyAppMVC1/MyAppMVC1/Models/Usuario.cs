@@ -172,9 +172,11 @@ public class Usuario
     {
         error = null;
 
+
         try
         {
-            using var conexion = new MySqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            using var conexion = new MySqlConnection(connectionString);
 
             conexion.Open();
             var sql = @"UPDATE usuarios 
@@ -187,7 +189,10 @@ public class Usuario
             cmd.Parameters.AddWithValue("@apellidos", apellidos);
             cmd.Parameters.AddWithValue("@email", email);
 
-            return cmd.ExecuteNonQuery() == 1;
+            var filas = cmd.ExecuteNonQuery();
+            Console.WriteLine("Filas afectadas: " + filas);
+            return filas == 1;
+
         }
         catch (Exception ex)
         {

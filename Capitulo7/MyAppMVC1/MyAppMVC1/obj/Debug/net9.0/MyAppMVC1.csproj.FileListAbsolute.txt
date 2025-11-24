@@ -99,4 +99,4 @@ C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\ref
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.csproj.AssemblyReference.cache
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\bin\Debug\net9.0\MySqlConnector.dll
 C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\MyAppMVC1.csproj.Up2Date
-C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\compressed\nggdyf0ovc-9167pgjlqw.gz
+C:\Users\ibai\Desktop\CursoC#\Capitulo7\MyAppMVC1\MyAppMVC1\obj\Debug\net9.0\compressed\nggdyf0ovc-pf4negacxh.gz
