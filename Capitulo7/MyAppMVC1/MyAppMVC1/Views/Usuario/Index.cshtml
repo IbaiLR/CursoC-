@@ -1,4 +1,5 @@
 ﻿@model List<MyAppMVC1.Models.Usuario>
+@inject Microsoft.AspNetCore.Http.IHttpContextAccessor Accessor
 
 <h2>Usuarios registrados</h2>
 
@@ -32,7 +33,9 @@ else
                     <td>@u.email</td>
                     <td>
                         <a asp-controller="Usuario" asp-action="verDetalles" asp-route-id="@u.id"> Ver detalles</a>
-                        <a asp-controller="Usuario" asp-action="eliminarUsuario" asp-route-id="@u.id"> Eliminar Usuario</a>
+                        @if (Accessor.HttpContext.Session.GetString("usuarioNombre")!=null) {
+                            <a asp-controller="Usuario" asp-action="eliminarUsuario" asp-route-id="@u.id"> Eliminar Usuario</a>
+                        }
                     </td>
                 </tr>
                  
@@ -44,3 +47,11 @@ else
 
     <a asp-controller="Home" asp-action="Index"> Volver</a>
 }
+
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        alert("@TempData["Mensaje"]");
+    </script>
+}
+

@@ -12,14 +12,24 @@ namespace MyAppMVC1.Controllers;
         {
             _configuration = configuration;
         }
-        [HttpGet]
-        public IActionResult Crear()
+    [HttpGet]
+    public IActionResult Crear()
+    {
+        if (HttpContext.Session.GetString("usuarioEmail") == null)
         {
             return View();
         }
+        else
+        {
+            TempData["Mensaje"] = "No puedes registrar un usuario con la sesión iniciada";
+            return RedirectToAction("Index", "Home");
+        }
+    }
 
-        [HttpPost]
+    [HttpPost]
         public IActionResult Crear(Usuario usuario)
+        {
+        if (HttpContext.Session.GetString("usuarioEmail") == null)
         {
             if (!ModelState.IsValid)
                 return View(usuario);
@@ -31,6 +41,12 @@ namespace MyAppMVC1.Controllers;
             // enseña el motivo en el formulario
             ModelState.AddModelError(string.Empty, error ?? "Error desconocido al insertar.");
             return View(usuario);
+        }
+        else
+        {
+            TempData["Mensaje"] = "No puedes registrar un usuario con la sesión iniciada";
+            return RedirectToAction("Index", "Home");
+        }
         }
 
         public IActionResult Index()
@@ -103,24 +119,49 @@ namespace MyAppMVC1.Controllers;
     [HttpGet]
     public IActionResult mostrarEditarPerfil(string email)
     {
-        Usuario u = Usuario.GetByEmail(email, _configuration);
-
-        var vm = new EditarPerfilViewModel
+        try
         {
-            id = u.id,
-            nombre= u.nombre,
-            apellidos= u.apellidos,
-            email = u.email,
-        };
-        if (u == null)
-            return View();
-        return View("EditarPerfil", vm);
+            if (HttpContext.Session.GetString("usuarioEmail") != null)
+            {
+                Usuario usuarioSesion = Usuario.GetByEmail(HttpContext.Session.GetString("usuarioEmail"), _configuration);
+
+                Usuario u = Usuario.GetByEmail(email, _configuration);
+                if (usuarioSesion.email != u.email)
+                {
+                    TempData["Mensaje"] = "Solo puedes editar tu perfil.";
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+
+                    var vm = new EditarPerfilViewModel
+                    {
+                        id = u.id,
+                        nombre = u.nombre,
+                        apellidos = u.apellidos,
+                        email = u.email,
+                    };
+                    if (u == null)
+                        return View();
+                    return View("EditarPerfil", vm);
+                }
+            }
+            else
+            {
+                TempData["Mensaje"] = "Debes de iniciar sesión para poder editar tu perfil";
+                return RedirectToAction("Index", "Home");
+
+            }
+        }catch(Exception ex)
+        {
+            TempData["Mensaje"] = "Error al editar el perfil";
+            return RedirectToAction("Index", "Home");
+        }
     }
 
     [HttpPost]
-    public IActionResult editarPerfil(Usuario u)
-    {
-        ModelState.Remove("contrasenna");
+    public IActionResult editarPerfil(EditarPerfilViewModel vm)
+    { 
 
         if (!ModelState.IsValid) {
             foreach (var e in ModelState)
@@ -129,25 +170,26 @@ namespace MyAppMVC1.Controllers;
                     Console.WriteLine($" - {e.Key}: {err.ErrorMessage}");
             }
         
-            return View("EditarPerfil", u);
+            return View("EditarPerfil", vm);
         }
 
-        bool ok = u.Update(_configuration, out string? error);
+        var usuario = Usuario.getById(vm.id, _configuration);
+        if (usuario == null)
+            return NotFound();
+        usuario.nombre = vm.nombre;
+        usuario.apellidos = vm.apellidos;
+        usuario.email = vm.email;
+
+        bool ok = usuario.Update(_configuration, out string? error);
         if (!ok)
         {
-            Console.WriteLine("Error al actualizar al usuario");
-            return View("EditarPerfil", u);
+            return View("EditarPerfil", vm);
         }
-        Console.WriteLine("NUEVOS DATOS");
-        Console.WriteLine("ID del usuario: " + u.id);
-        Console.WriteLine("Nombre del usuario: " + u.nombre);
-        Console.WriteLine("Apellidos del usuario: " + u.apellidos);
-
-        HttpContext.Session.SetString("usuarioNombre", u.nombre);
-        HttpContext.Session.SetString("usuarioEmail", u.email);
+        HttpContext.Session.SetString("usuarioNombre", usuario.nombre);
+        HttpContext.Session.SetString("usuarioEmail", usuario.email);
 
        
-        return RedirectToAction("mostrarEditarPerfil", new {email = u.email});
+        return RedirectToAction("mostrarEditarPerfil", new {email = usuario.email});
 
        
     }
@@ -163,11 +205,19 @@ namespace MyAppMVC1.Controllers;
 
     public IActionResult eliminarUsuario(int id)
     {
-        Usuario u = Usuario.getById(id, _configuration);
-        if (u != null)
-            Usuario.eliminarUsuario(id, _configuration);
-
-        return RedirectToAction("Index");
+        //Usuario usuarioSesion = Usuario.GetByEmail(HttpContext.Session.GetString("usuarioEmail"),_configuration);
+        if (HttpContext.Session.GetString("usuarioEmail") != null)
+        {
+            Usuario u = Usuario.getById(id, _configuration);
+            if (u != null)
+                Usuario.eliminarUsuario(id, _configuration);
+        }
+        else
+        {
+            TempData["Mensaje"] = "Debes iniciar sesión antes.";
+        }
+            return RedirectToAction("Index");
+        
 
 
     }

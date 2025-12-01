@@ -22,3 +22,11 @@
     <a asp-controller="Usuario" asp-action="cerrarSesion" class="btn btn-primary"> Cerrar sesión</a>
     <a asp-controller="Usuario" asp-action="mostrarEditarPerfil" asp-route-email="@emailSesion" class="btn btn-primary"> Editar Perfil</a>
 }
+
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        alert("@Html.Raw(TempData["Mensaje"])");
+    </script>
+
+}
