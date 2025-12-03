@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+@model GestionTorneos.Models.Juego;
+
+<h1>Crear Juegos Nuevos</h1>
+<form asp-action="Create" method="post" class="d-flex flex-column gap-4 mt-5">
+    <input type="text" asp-for="Nombre" placeholder="Nombre del juego" class="w-25" />
+    <input type="text" asp-for="Genero" placeholder="Género del juego" class="w-25" />
+    <input type="text" asp-for="Empresa" placeholder="Empresa del juego" class="w-25" />
+    <input type="number" min="1920" placeholder="Año de lanzamiento" asp-for="AnnoLanzamiento" class="w-25" />
+    <button type="submit" class="btn btn-secondary w-25"> Insertar </button>
+</form>
+<a asp-controller="Home" asp-action="Index"> Volver al Inicio</a>
+
