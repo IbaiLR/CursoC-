@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc.Filters;
+﻿using K4os.Compression.LZ4.Streams.Adapters;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
 using Org.BouncyCastle.Crypto.Engines;
@@ -60,10 +61,11 @@ namespace GestionTorneos.Models
                 {
                     var juego = new Juego
                     {
+                        JuegoId = reader.GetInt32("JuegoId"),
                         Nombre = reader.GetString("Nombre"),
                         Genero = reader.GetString("Genero"),
-                        Empresa= reader.GetString("Empresa"),
-                        AnnoLanzamiento= reader.GetInt32("AnnoLanzamiento")
+                        Empresa = reader.GetString("Empresa"),
+                        AnnoLanzamiento = reader.GetInt32("AnnoLanzamiento")
                     };
                     listaJuegos.Add(juego);
                 }

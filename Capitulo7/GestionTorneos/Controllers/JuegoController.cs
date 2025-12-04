@@ -33,20 +33,18 @@ namespace GestionTorneos.Controllers
                 Console.WriteLine("Llega al try");
                 juego.Create(_configuration);
                 return RedirectToAction("Index", "Home");
-                    
 
-            } catch(Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine("Error");
                 TempData["Mensaje"] = "Error al intentar crear el Juego: " + ex.Message;
                 return View("Index", juego);
             }
         }
-
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-
-        }
     }
-}
+
+
+    }
+

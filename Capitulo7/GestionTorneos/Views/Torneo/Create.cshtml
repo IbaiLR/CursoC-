@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+}
+@model GestionTorneos.Models.ViewModels.CreateTorneoViewModel
+
+
+<h1>Crear Nuevos Torneos</h1>
+<form asp-controller="Torneo" asp-action="CreatePrueba" class="d-flex flex-column" method="get">
+    <input type="text" asp-for="Nombre" class="w-25" placeholder="Nombre"/>
+    <input type="date" asp-for="FechaInicio" class="w-25" placeholder="Fecha de Inicio" />
+    <input type="date" asp-for="FechaFin" class="w-25" placeholder="Fecha de Fin" />
+    <input type="number" asp-for="Premio" class="w-25" placeholder="Premio" />
+    <input type="text" asp-for="Formato" class="w-25" placeholder="Formato" />
+    <select>
+        @foreach( var juego in ViewBag.Juegos)
+        {
+            <option value="@juego.JuegoId">
+                @juego.Nombre
+            </option>
+        }
+    </select>
+    <button type="submit"> Insertar Torneo</button>
+    
+</form>
+
