@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GestionTorneos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7a420edead5f4e3c76e99bd110526f9a6f92b62e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8c059e93348ea2b1ec98cdef6fc1683d1769b937")]
 [assembly: System.Reflection.AssemblyProductAttribute("GestionTorneos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GestionTorneos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

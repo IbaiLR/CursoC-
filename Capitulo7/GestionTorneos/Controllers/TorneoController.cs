@@ -33,73 +33,25 @@ namespace GestionTorneos.Controllers
         public IActionResult Create(CreateTorneoViewModel t)
         {
             var listaJuegos = Juego.getAll(_configuration);
-            var contador = 0;
-            if (!ModelState.IsValid)
-            {
-                return View();
-            }
-            try
-            {
-                if (t.FechaInicio > t.FechaFin)
-                {
-                    TempData["Mensaje"] = "La fecha de inicio no puede ser mayor que la de fin";
-                    return View("Create", t);
-                }
-                foreach (var juego in listaJuegos)
-                {
-                    if (juego.JuegoId == t.JuegoId)
-                        contador++;
-                }
-                if (contador != 1)
-                {
-                    TempData["Mensaje"] = "Error al seleccionar el juego";
-                    return View("Create", t);
-                }
-                var torneo = new Torneo
-                {
-                    Nombre = t.Nombre,
-                    FechaInicio = t.FechaInicio,
-                    FechaFin = t.FechaFin,
-                    Premio = t.Premio,
-                    Formato = t.Formato
-                };
-                torneo.Create(_configuration);
-                return RedirectToAction("Index", "Home");
-            }
-            catch (Exception ex)
-            {
-                TempData["Mensaje"] = "Error inesperado";
-                Console.WriteLine(ex.Message);
-                return View("Create", t);
-            }
-        }
+            ViewBag.Juegos = listaJuegos;
 
-        [HttpGet]
-        public IActionResult CreatePrueba(Torneo t)
-        {
-            var listaJuegos = Juego.getAll(_configuration);
-            var contador = 0;
             if (!ModelState.IsValid)
-            {
-                return View();
-            }
+                return View(t);
+
             try
             {
                 if (t.FechaInicio > t.FechaFin)
                 {
                     TempData["Mensaje"] = "La fecha de inicio no puede ser mayor que la de fin";
-                    return View("Create", t);
+                    return View(t);
                 }
-                foreach (var juego in listaJuegos)
+
+                if (!listaJuegos.Any(j => j.JuegoId == t.JuegoId))
                 {
-                    if (juego.JuegoId == t.JuegoId)
-                        contador++;
+                    TempData["Mensaje"] = "Juego inválido";
+                    return View(t);
                 }
-                if (contador != 1)
-                {
-                    TempData["Mensaje"] = "Error al seleccionar el juego";
-                    return View("Create", t);
-                }
+
                 var torneo = new Torneo
                 {
                     Nombre = t.Nombre,
@@ -107,17 +59,21 @@ namespace GestionTorneos.Controllers
                     FechaFin = t.FechaFin,
                     Premio = t.Premio,
                     Formato = t.Formato,
-                    JuegoId= t.JuegoId
+                    JuegoId = t.JuegoId
                 };
+
                 torneo.Create(_configuration);
+
+                TempData["Mensaje"] = "Torneo creado correctamente";
                 return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
-                TempData["Mensaje"] = "Error inesperado";
-                Console.WriteLine(ex.Message);
-                return View("Create", t);
+                TempData["Mensaje"] = "Error inesperado: " + ex.Message;
+                return View(t);
             }
         }
+
+     
     }
 }
