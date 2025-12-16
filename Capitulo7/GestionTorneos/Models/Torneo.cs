@@ -1,4 +1,5 @@
 ﻿using K4os.Compression.LZ4.Streams.Adapters;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Configuration;
 using MySql.Data.MySqlClient;
@@ -84,6 +85,46 @@ namespace GestionTorneos.Models
             }
             return listaTorneos;
         }
+
+        public static Torneo GetById(IConfiguration configuration, int TorneoId)
+        {
+            using var connection = new MySqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            connection.Open();
+            string sql = "SELECT * FROM torneos WHERE TorneoId=@TorneoId";
+            using var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("TorneoId", TorneoId);
+            using var reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+                Torneo torneo = new Torneo()
+                {
+                    TorneoId = reader.GetInt32("TorneoId"),
+                    Nombre = reader.GetString("Nombre"),
+                    FechaInicio = reader.GetDateTime("FechaInicio"),
+                    FechaFin = reader.GetDateTime("FechaFin"),
+                    Premio = reader.GetInt32("Premio"),
+                    Formato = reader.GetString("Formato"),
+                    JuegoId = reader.GetInt32("JuegoId")
+                };
+                return torneo;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static void DeleteById(IConfiguration configuration, int TorneoId)
+        {
+            using var connection = new MySqlConnection(configuration.GetConnectionString("DefaultConnection"));
+            connection.Open();
+            string sql = "DELETE FROM torneos WHERE TorneoId= @TorneoId";
+            using var cmd = new MySqlCommand(sql, connection);
+            cmd.Parameters.AddWithValue("TorneoId", TorneoId);
+            cmd.ExecuteNonQuery();
+
+        }
+       
 
     }
 }

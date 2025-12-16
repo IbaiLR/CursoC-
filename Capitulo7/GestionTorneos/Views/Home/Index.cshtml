@@ -9,6 +9,7 @@
         <th> Fecha de Inicio</th>
         <th> Fecha de Fin</th>
         <th> Juego del Torneo</th>
+        <th> Acciones</th>
 
     </tr>
     @foreach(var t in Model)
@@ -18,6 +19,7 @@
             <td> @t.FechaInicio </td>
             <td> @t.FechaFin </td>
             <td> @t.JuegoNombre </td>
+            <td> <a asp-controller="Torneo" asp-action="EliminarTorneo" asp-route-id="@t.TorneoId" class="btn btn-danger">Eliminar torneo</a> </td>
         </tr>
     }
 </table>
@@ -28,3 +30,10 @@
     <a asp-controller="Torneo" asp-action="Create" class="btn btn-primary"> Añadir un Torneo nuevo</a>
     
 </div>
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        alert("@Html.Raw(TempData["Mensaje"])");
+    </script>
+
+}

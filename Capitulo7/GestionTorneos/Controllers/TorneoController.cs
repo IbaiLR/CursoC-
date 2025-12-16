@@ -74,6 +74,18 @@ namespace GestionTorneos.Controllers
             }
         }
 
-     
+        public IActionResult EliminarTorneo(int id)
+        {
+            var torneo= Torneo.GetById(_configuration, id);
+            if(torneo!= null){
+                Torneo.DeleteById(_configuration, id);
+            }
+
+            return RedirectToAction("Index", "Home");
+              
+            
+        }
+
+
     }
 }

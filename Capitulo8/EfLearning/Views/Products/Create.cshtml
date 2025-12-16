@@ -1,0 +1,20 @@
+﻿@model EfLearning.ViewModels.ProductCreateViewModel
+
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+
+    <div>
+        <label asp-for="Name"></label><br />
+        <input asp-for="Name" />
+        <span asp-validation-for="Name" style="color:red"></span>
+    </div>
+
+    <div>
+        <label asp-for="Price"></label><br />
+        <input asp-for="Price" />
+        <span asp-validation-for="Price" style="color:red"></span>
+    </div>
+
+    <br />
+    <button type="submit">Guardar</button>
+</form>

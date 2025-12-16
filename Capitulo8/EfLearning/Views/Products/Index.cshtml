@@ -1,0 +1,28 @@
+﻿@model IEnumerable<EfLearning.ViewModels.ProductListItemViewModel>
+
+
+<h2>Productos</h2>
+
+<p>
+    <a asp-action="Create">Crear nuevo producto</a>
+</p>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Creado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+                <td>@product.CreatedAt</td>
+            </tr>
+        }
+    </tbody>
+</table>

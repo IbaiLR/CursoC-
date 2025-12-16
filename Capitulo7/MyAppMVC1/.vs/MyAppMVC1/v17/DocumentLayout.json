@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\models\\viewmodels\\editarperfilviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\editarperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\usuario\\editarperfil.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\usuario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\iniciarsesion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\usuario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\usuario\\crear.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|c:\\users\\ibai\\desktop\\cursoc#\\capitulo7\\myappmvc1\\myappmvc1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9647ACE3-9A3D-4413-9567-DD08A1BD0ED1}|MyAppMVC1\\MyAppMVC1.csproj|solutionrelative:myappmvc1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "EditarPerfilViewModel.cs",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\ViewModels\\EditarPerfilViewModel.cs",
               "RelativeDocumentMoniker": "MyAppMVC1\\Models\\ViewModels\\EditarPerfilViewModel.cs",
@@ -66,12 +66,11 @@
               "RelativeToolTip": "MyAppMVC1\\Models\\ViewModels\\EditarPerfilViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T13:31:06.12Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T13:31:06.12Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Exito.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Exito.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\Exito.cshtml",
@@ -79,25 +78,24 @@
               "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\Exito.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T12:18:06.204Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:18:06.204Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Index.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\Index.cshtml",
               "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Index.cshtml",
               "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-12-04T12:18:03.267Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "DetallesUsuario.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\DetallesUsuario.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\DetallesUsuario.cshtml",
@@ -105,12 +103,11 @@
               "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\DetallesUsuario.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T12:17:58.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:17:58.948Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "EditarPerfil.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\EditarPerfil.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\EditarPerfil.cshtml",
@@ -118,12 +115,11 @@
               "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\EditarPerfil.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T12:17:45.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-04T12:17:45.879Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Crear.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\Crear.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\Crear.cshtml",
@@ -135,16 +131,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Usuario.cs",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Usuario.cs",
               "RelativeDocumentMoniker": "MyAppMVC1\\Models\\Usuario.cs",
               "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Models\\Usuario.cs",
               "RelativeToolTip": "MyAppMVC1\\Models\\Usuario.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAswBUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAswBUAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-03T12:36:12.483Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-03T12:36:12.483Z"
             },
             {
               "$type": "Document",
@@ -154,14 +149,13 @@
               "RelativeDocumentMoniker": "MyAppMVC1\\Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "MyAppMVC1\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAJsAAAAAAAAAAAAswA4AAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAMEAAAAAAAAAAAAwwA4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-27T14:07:04.256Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T14:07:04.256Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "IniciarSesion.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Usuario\\IniciarSesion.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Usuario\\IniciarSesion.cshtml",
@@ -169,12 +163,11 @@
               "RelativeToolTip": "MyAppMVC1\\Views\\Usuario\\IniciarSesion.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T14:06:37.809Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-27T14:06:37.809Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\appsettings.json",
               "RelativeDocumentMoniker": "MyAppMVC1\\appsettings.json",
@@ -186,15 +179,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 0,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MyAppMVC1\\Views\\Home\\Index.cshtml",
               "ToolTip": "C:\\Users\\ibai\\Desktop\\CursoC#\\Capitulo7\\MyAppMVC1\\MyAppMVC1\\Views\\Home\\Index.cshtml",
               "RelativeToolTip": "MyAppMVC1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-27T14:05:12.287Z"
+              "WhenOpened": "2025-11-27T14:05:12.287Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",

@@ -24,3 +24,11 @@
     
 </form>
 <a asp-controller="Home" asp-action="index" class="btn btn-primary"> Volver</a>
+
+@if (TempData["Mensaje"] != null)
+{
+    <script>
+        alert("@Html.Raw(TempData["Mensaje"])");
+    </script>
+
+}
