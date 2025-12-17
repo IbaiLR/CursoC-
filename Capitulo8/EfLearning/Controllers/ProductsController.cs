@@ -1,9 +1,11 @@
 ﻿using EfLearning.Services;
 using EfLearning.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EfLearning.Controllers;
 
+[Authorize]
 public class ProductsController : Controller
 {
     private readonly IProductService _productService;

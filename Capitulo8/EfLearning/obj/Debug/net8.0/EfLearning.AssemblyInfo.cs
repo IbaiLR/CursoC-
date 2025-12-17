@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EfLearning")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bc8da8a2086bd08b713c7c0308dbe8c9a68534b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18528c5e90a982a494094129af638ec0f2b09085")]
 [assembly: System.Reflection.AssemblyProductAttribute("EfLearning")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EfLearning")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
